@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Project Readme
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React application that implements various features related to user authentication, product listing, and shopping cart functionality. Below are the key features implemented in this project:
 
-## Available Scripts
+## 1. Login Process
 
-In the project directory, you can run:
+The login process is implemented using the [DummyJSON Auth API](https://dummyjson.com/docs/auth). Users can log in, and a token is obtained for authorization purposes.
 
-### `npm start`
+## 2. Authorization Token Storage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Upon successful login, the obtained authorization token is saved securely for future use. This token is crucial for accessing protected routes and making authenticated API requests.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 3. Protected Home Page
 
-### `npm test`
+The home page is set as a protected route, allowing only logged-in users to access its content. Unauthorized users are redirected to the login page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 4. Product Fetching
 
-### `npm run build`
+Products are fetched from the [DummyJSON Products API](https://dummyjson.com/docs/products) and displayed on the home page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 5. Product Search
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A search functionality is implemented on the home page, allowing users to search for products based on their names. The search is case-insensitive and dynamically updates the displayed products.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 6. Price Filter
 
-### `npm run eject`
+Users can filter products on the home page based on price ranges. This provides an easy way for users to narrow down their product selection based on their budget.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 7. Shopping Cart
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A shopping cart feature is implemented, allowing users to add products to their cart. The cart count is displayed on the top, providing users with quick access to view their selected items.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 8. Add to Cart Button
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Product cards on the home page include an "Add to Cart" button, enabling users to easily add products to their shopping cart with a single click.
 
-## Learn More
+## Project Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To run this project locally, follow these steps:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Start the development server using `npm start`.
 
-### Code Splitting
+Note: Ensure you have Node.js and npm installed on your machine.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to explore the codebase and make any necessary adjustments to fit your specific requirements. Enjoy exploring the features of this React shopping application!
