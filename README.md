@@ -5,6 +5,10 @@ This project is a React application that implements various features related to 
 ## 1. Login Process
 
 The login process is implemented using the [DummyJSON Auth API](https://dummyjson.com/docs/auth). Users can log in, and a token is obtained for authorization purposes.
+Username: atuny0, Password: 9uQFF1Lh
+Username: hbingley1, Password: CQutx25i8r
+Username: rshawe2, Password: OWsTbMUgFc
+
 
 ## 2. Authorization Token Storage
 
@@ -33,6 +37,7 @@ A shopping cart feature is implemented, allowing users to add products to their 
 ## 8. Add to Cart Button
 
 Product cards on the home page include an "Add to Cart" button, enabling users to easily add products to their shopping cart with a single click.
+
 
 ## Project Setup
 
