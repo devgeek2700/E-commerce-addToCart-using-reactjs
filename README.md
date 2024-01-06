@@ -1,4 +1,4 @@
-# Project Readme
+# E-commerce-addToCart-using-reactjs
 
 This project is a React application that implements various features related to user authentication, product listing, and shopping cart functionality. Below are the key features implemented in this project:
 
