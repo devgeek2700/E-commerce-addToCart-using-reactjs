@@ -43,17 +43,25 @@ https://addtocart-ecommerce.onrender.com
 
 ## Screenshot
 
-## Homepage 
+## Login page 
 
-![App Screenshot](https://github.com/devgeek2700/ChatBot-using-Botpress/blob/master/src/Output/o1.png?raw=true)
+![App Screenshot](https://github.com/devgeek2700/E-commerce-addToCart-using-reactjs/blob/master/Output/a1.png?raw=true)
 
-## Chatbot Interface
+## Homepage
 
-![App Screenshot](https://github.com/devgeek2700/ChatBot-using-Botpress/blob/master/src/Output/o2.png?raw=true)
+![App Screenshot](https://github.com/devgeek2700/E-commerce-addToCart-using-reactjs/blob/master/Output/a2.png?raw=true)
 
-## Entire FQAs with Chatbot
+## Price Filter
 
-![App Screenshot](https://github.com/devgeek2700/ChatBot-using-Botpress/blob/master/src/Output/o3.png?raw=true)
+![App Screenshot](https://github.com/devgeek2700/E-commerce-addToCart-using-reactjs/blob/master/Output/a3.png?raw=true)
+
+## Search Filter
+
+![App Screenshot](https://github.com/devgeek2700/E-commerce-addToCart-using-reactjs/blob/master/Output/a4.png?raw=true)
+
+## Cart Page
+
+![App Screenshot](https://github.com/devgeek2700/E-commerce-addToCart-using-reactjs/blob/master/Output/a5.png?raw=true)
 
 
 ## Project Setup
