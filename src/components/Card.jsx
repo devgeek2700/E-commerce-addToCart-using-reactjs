@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./card.css";
+import { Link, useNavigate } from "react-router-dom";
+import Cart from "./Cart";
 
 function Card() {
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedPriceRange, setSelectedPriceRange] = useState(null);
+  const [cartItems, setCartItems] = useState([]); // Make sure it's initialized as an empty array
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -34,11 +37,6 @@ function Card() {
     fetchProducts();
   }, []);
 
-  // search by name
-  //   const filteredProducts = products.filter((product) =>
-  //   product.title.toLowerCase().includes(searchQuery.toLowerCase())
-  // );
-
   const filteredProducts = products
     .filter((product) =>
       product.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -53,7 +51,17 @@ function Card() {
       );
     });
 
-  const priceRanges = ["0-300", "301-700", "701-1000", "1100-2000"];
+  const priceRanges = ["0-150", "151-550", "551-1000", "1100-2000"];
+
+  const Navigate = useNavigate();
+
+  const addToCart = (productId) => {
+    const productToAdd = products.find((product) => product.id === productId);
+    setCartItems((prevCartItems) => [
+      ...prevCartItems,
+      { ...productToAdd, quantity: 1 },
+    ]);
+  };
 
   return (
     <>
@@ -74,6 +82,14 @@ function Card() {
         {/* Price filter buttons */}
         <div className="priceFilter">
           <p>Filter by Price:</p>
+          <button
+            id="PriceBtn"
+            className={!selectedPriceRange ? "selected" : ""}
+            onClick={() => setSelectedPriceRange(null)}
+          >
+            All
+          </button>
+
           {priceRanges.map((range) => (
             <button
               key={range}
@@ -84,13 +100,6 @@ function Card() {
               {range}
             </button>
           ))}
-          <button
-            id="PriceBtn"
-            className={!selectedPriceRange ? "selected" : ""}
-            onClick={() => setSelectedPriceRange(null)}
-          >
-            All
-          </button>
         </div>
 
         <div className="main">
@@ -114,7 +123,12 @@ function Card() {
                     </div>
                     <p className="card_text">${product.price}</p>
                     <button className="btn card_btn">Read More</button>
-                    <button className="btn card_btn">Add to cart</button>
+                    <button
+                      className="btn card_btn"
+                      onClick={() => addToCart(product.id)}
+                    >
+                      Add to cart
+                    </button>
                   </div>
                 </div>
               </li>
@@ -123,6 +137,10 @@ function Card() {
         </div>
 
         <h3 className="made_by">Made with India</h3>
+     
+
+
+          <Cart cartItems={cartItems} setCartItems={setCartItems} />
       </div>
     </>
   );

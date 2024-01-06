@@ -216,6 +216,14 @@
     margin-top: 8px;
   }
 
+  #cartnotfiy{
+    font-size: 10px;
+  }
+
+  .badgeNav{
+    font-size: 20px;
+  }
+
   .navbar-container input[type="checkbox"]:checked~.menu-items {
     transform: translateX(0);
   }

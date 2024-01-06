@@ -1,0 +1,17 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
+.product_name{
+    font-size: 20px;
+}
+
+.qlybox{
+    width: 50px;
+    height: 38px;
+}
+
+.cart_container{
+    margin-bottom: 50px;
+}

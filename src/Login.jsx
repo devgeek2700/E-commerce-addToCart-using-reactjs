@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Card from "./components/Card";
 import "./login.css";
 
-const App = () => {
+const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -12,19 +12,19 @@ const App = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+
   useEffect(() => {
-    // Check if token exists in localStorage
-    if (token) {
+    const storedToken = localStorage.getItem("token");
+    if (storedToken) {
+      setToken(storedToken);
       setIsLoggedIn(true);
     }
-  }, [token]);
+  }, []); 
 
- 
   const handleLogin = async () => {
     try {
       setLoading(true);
 
-      // Check if username and password are filled
       if (!username || !password) {
         alert("Please fill in both username and password");
         return;
@@ -44,18 +44,15 @@ const App = () => {
       if (response.ok) {
         const { token } = data;
 
-        // Check if the response contains a valid token
         if (!token) {
           alert("Invalid username or password");
           return;
         }
 
-        // Save token to state and localStorage
         setToken(token);
         setIsLoggedIn(true);
         localStorage.setItem("token", token);
       } else {
-        // Handle authentication error
         alert("Invalid username or password");
         setError("Invalid username or password");
       }
@@ -67,8 +64,8 @@ const App = () => {
     }
   };
 
+
   const handleLogout = () => {
-    // Clear token from state and localStorage
     setToken("");
     setIsLoggedIn(false);
     localStorage.removeItem("token");
@@ -78,9 +75,6 @@ const App = () => {
     <div>
       {isLoggedIn ? (
         <div>
-          {/* <h1>Welcome to the Home page</h1>
-                    <button>Logout</button> */}
-
           <section class=" top-txt ">
             <div class="head container ">
               <div class="head-txt ">
@@ -93,7 +87,8 @@ const App = () => {
               </div>
             </div>
           </section>
-          <Navbar />
+
+          <Navbar/> 
 
           <section id="home">
             <div class="home_page ">
@@ -181,4 +176,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Login;
